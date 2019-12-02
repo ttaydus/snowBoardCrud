@@ -7,7 +7,15 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Hello World is Working!!')
+    res.send('GET request to the homepage')
+});
+
+app.get('/test', (req, res) => {
+    res.send('another GET')
+});
+
+app.post('/', (req, res) => {
+    res.send('POST request to the homepage')
 });
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
