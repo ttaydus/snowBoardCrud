@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('snowboardgear', (table) => {
-        table.increments('id');
+        table.increments();
         table.string('itemName');
         table.string('price');
     })
